@@ -202,8 +202,8 @@ def index():
 
 @app.route('/uploading')
 def uploading():
-    if 'username' not in session:
-        return render_template('login.html')
+    # if 'username' not in session:
+    #     return render_template('login.html')
 
     return render_template("upload_data.html")
 
