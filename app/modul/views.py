@@ -195,8 +195,8 @@ def logout():
 
 @app.route('/index')
 def index():
-    if 'username' not in session:
-        return render_template('login.html')
+    # if 'username' not in session:
+    #     return render_template('login.html')
 
     return render_template("index.html")
 
@@ -209,8 +209,8 @@ def uploading():
 
 @app.route('/hasilupload', methods = ['GET', 'POST'])
 def hasilupload():
-    if 'username' not in session:
-        return render_template('login.html')
+    # if 'username' not in session:
+    #     return render_template('login.html')
 
     if request.method == 'POST':
         f = request.files['file']
@@ -250,8 +250,8 @@ def hasilupload():
 
 @app.route('/hasilpemilihan', methods = ['GET', 'POST'])
 def hasilpemilihan():
-    if 'username' not in session:
-        return render_template('login.html')
+    # if 'username' not in session:
+    #     return render_template('login.html')
 
     if request.method == 'POST':
 
@@ -303,8 +303,8 @@ def hasilpemilihan():
 
 @app.route('/tokenisasi', methods = ['GET', 'POST'])
 def tokenisasi():
-    if 'username' not in session:
-        return render_template('login.html')
+    # if 'username' not in session:
+    #     return render_template('login.html')
 
     dbmodel = x.DBModel()
     get_data =dbmodel.get_data_all("Judul_Skripsi","datanya")
@@ -334,8 +334,8 @@ def tokenisasi():
 
 @app.route('/filtering', methods=['GET', 'POST'])
 def filtering():
-    if 'username' not in session:
-        return render_template('login.html')
+    # if 'username' not in session:
+    #     return render_template('login.html')
 
     dbmodel = x.DBModel()
     get_data = dbmodel.get_data_all("Judul_Skripsi", "Tokenisasi")
@@ -367,8 +367,8 @@ def filtering():
 
 @app.route('/stemming', methods=['GET', 'POST'])
 def stemming():
-    if 'username' not in session:
-        return render_template('login.html')
+    # if 'username' not in session:
+    #     return render_template('login.html')
 
     dbmodel = x.DBModel()
     get_data = dbmodel.get_data_all("Judul_Skripsi","Fitering")
