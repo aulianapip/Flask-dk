@@ -297,10 +297,10 @@ def hasilpemilihan():
         print (data)
         
 
-        print (data.encode("utf-8"))
+        
 
         dbmodel = x.DBModel() #memanggil file model dimodel class DBModel
-        result_insert_table= dbmodel.insert_cleaning_data("Judul_Skripsi","datanya",data)
+        result_insert_table= dbmodel.insert_cleaning_data("Judul_Skripsi","datanya",header)
         result_insert_header = dbmodel.insert_header("Judul_Skripsi","judulnya",header)
 
     return render_template('masukprosessing.html', tables=[data.to_html(classes='table table-striped table-bordered table-hover')])
