@@ -297,8 +297,7 @@ def hasilpemilihan():
         print (data)
         
 
-        encoded_string = map(str, data)
-        print (encoded_string)
+        print (u", ".join(data))
 
         dbmodel = x.DBModel() #memanggil file model dimodel class DBModel
         result_insert_table= dbmodel.insert_cleaning_data("Judul_Skripsi","datanya",data)
