@@ -278,6 +278,7 @@ def hasilpemilihan():
         wb = load_workbook(filename='app/upload_data/'+file)
         sheet_ranges = wb[sheet]
         data = pd.DataFrame(sheet_ranges.values)
+        print (data)
 
         row1 = int(select1)
         row2 = int(select2)
