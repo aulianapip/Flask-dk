@@ -287,7 +287,9 @@ def hasilpemilihan():
         cols = list(map(int,cols)) #corvert to int
         xname = namacolom.split(",") #memisahkan inptan nama kolom berdasarkan koma
         data =data[row1:row2][cols]#data terpilih berdasarkan inputan baris dan kolom
+        print (data)
         data.columns = [xname]
+        print (data)
         data = data.dropna()
 
         header = {}
