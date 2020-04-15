@@ -258,7 +258,7 @@ def hasilpemilihan():
         select1 = request.form["select1"]
         select2 = request.form["select2"]
         selectcolom =request.form["selectcolom"]
-        namacolom = request.form["namacolom"]
+        namacolom = request.form["namacolom"].encode('utf-8')
 
         dbmodel = x.DBModel()
         # get sheet dari database, hasil upload terakhir
@@ -290,7 +290,7 @@ def hasilpemilihan():
         print (data)
         coba= data[row1:row2][cols]#data terpilih berdasarkan inputan baris dan kolom
         print(coba)
-        data.columns = 'judul'
+        data.columns = [xname]
         print (data)
         data = data.dropna()
 
