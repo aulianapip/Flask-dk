@@ -283,9 +283,9 @@ def hasilpemilihan():
         row1 = int(select1)
         row2 = int(select2)
 
-        cols = selectcolom.split(",") #memisahkan inputan kolom dipilih berdasarkan koma
+        cols = selectcolom #memisahkan inputan kolom dipilih berdasarkan koma
         cols = list(map(int,cols)) #corvert to int
-        xname = namacolom.split(",") #memisahkan inptan nama kolom berdasarkan koma
+        xname = namacolom #memisahkan inptan nama kolom berdasarkan koma
         data =data[row1:row2][cols]#data terpilih berdasarkan inputan baris dan kolom
         print (data)
         coba= data[row1:row2][cols]#data terpilih berdasarkan inputan baris dan kolom
