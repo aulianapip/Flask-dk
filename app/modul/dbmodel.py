@@ -20,7 +20,7 @@ class DBModel:
 	def insert_cleaning_data(self, database, collection, documents):
 		db = self.client[database]
 		db[collection].drop()
-		results = db[collection].insert_many(documents.to_dict('records'))
+		results = db[collection].insert_many(documents('records'))
 		print(documents)
 		return results.inserted_ids
 
