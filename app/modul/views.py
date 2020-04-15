@@ -301,7 +301,9 @@ def hasilpemilihan():
         pd.options.display.max_colwidth = 999
         print (data)
         
-        
+        df = pd.DataFrame({'a': ['red', 'yellow', 'blue']})
+        print(df)
+        print(df.to_dict('dict'))
         
 
         dbmodel = x.DBModel() #memanggil file model dimodel class DBModel
