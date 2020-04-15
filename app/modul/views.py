@@ -296,6 +296,7 @@ def hasilpemilihan():
         pd.options.display.max_colwidth = 999
 
         encoded_string = map(str, data)
+        print (encoded_string)
 
         dbmodel = x.DBModel() #memanggil file model dimodel class DBModel
         result_insert_table= dbmodel.insert_cleaning_data("Judul_Skripsi","datanya",encoded_string)
