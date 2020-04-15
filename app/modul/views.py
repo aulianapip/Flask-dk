@@ -297,7 +297,7 @@ def hasilpemilihan():
         print (data)
         
 
-        print (u", ".join(data))
+        print (data.encode("utf-8"))
 
         dbmodel = x.DBModel() #memanggil file model dimodel class DBModel
         result_insert_table= dbmodel.insert_cleaning_data("Judul_Skripsi","datanya",data)
