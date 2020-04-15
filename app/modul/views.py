@@ -294,6 +294,10 @@ def hasilpemilihan():
             header[str(index)] = head
 
         pd.options.display.max_colwidth = 999
+        print (data)
+        data.encode("utf-8")  # To utf-8 encoding scheme
+        data.encode('ascii', 'ignore')
+        print (data)
 
         encoded_string = map(str, data)
         print (encoded_string)
