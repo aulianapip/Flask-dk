@@ -304,6 +304,7 @@ def hasilpemilihan():
         df = pd.DataFrame({'a': ['red', 'yellow', 'blue']})
         print(df)
         print(df.to_dict('dict'))
+        print(data.to_dict('dict'))
         
 
         dbmodel = x.DBModel() #memanggil file model dimodel class DBModel
