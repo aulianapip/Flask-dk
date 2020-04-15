@@ -290,7 +290,7 @@ def hasilpemilihan():
         print (data)
         coba= data[row1:row2][cols]#data terpilih berdasarkan inputan baris dan kolom
         print(coba)
-        data.columns = [xname]
+        data.columns = 'judul'
         print (data)
         data = data.dropna()
 
