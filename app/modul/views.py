@@ -295,15 +295,13 @@ def hasilpemilihan():
 
         pd.options.display.max_colwidth = 999
         print (data)
-        data.encode("utf-8")  # To utf-8 encoding scheme
-        data.encode('ascii', 'ignore')
-        print (data)
+        
 
         encoded_string = map(str, data)
         print (encoded_string)
 
         dbmodel = x.DBModel() #memanggil file model dimodel class DBModel
-        result_insert_table= dbmodel.insert_cleaning_data("Judul_Skripsi","datanya",encoded_string)
+        result_insert_table= dbmodel.insert_cleaning_data("Judul_Skripsi","datanya",data)
         result_insert_header = dbmodel.insert_header("Judul_Skripsi","judulnya",header)
 
     return render_template('masukprosessing.html', tables=[data.to_html(classes='table table-striped table-bordered table-hover')])
