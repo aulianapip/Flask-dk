@@ -413,15 +413,15 @@ def stemming():
 
 @app.route('/inputK', methods = ['GET', 'POST'])
 def inputK():
-    if 'username' not in session:
-        return render_template('login.html')
+    # if 'username' not in session:
+    #     return render_template('login.html')
 
     return render_template("inputK.html")
 
 @app.route('/harmonic', methods=['GET', 'POST'])
 def harmonic():
-    if 'username' not in session:
-        return render_template('login.html')
+    # if 'username' not in session:
+    #     return render_template('login.html')
 
     dbmodel = x.DBModel()
     get_stemming = dbmodel.get_data_all("Judul_Skripsi","Stemming")
@@ -514,8 +514,8 @@ def harmonic():
 
 @app.route('/allfile', methods=['GET', 'POST'])
 def allfile():
-    if 'username' not in session:
-        return render_template('login.html')
+    # if 'username' not in session:
+    #     return render_template('login.html')
 
     dbmodel = x.DBModel()
     get_file = dbmodel.get_data_all("Judul_Skripsi", "file")
@@ -545,8 +545,8 @@ def allfile():
 
 @app.route('/showresult', methods=['GET', 'POST'])
 def showresult():
-    if 'username' not in session:
-        return render_template('login.html')
+    # if 'username' not in session:
+    #     return render_template('login.html')
 
     if request.method == 'POST':
         collection = request.form['collection']
@@ -568,8 +568,8 @@ def showresult():
 
 @app.route('/chart', methods=['GET','POST'])
 def chart():
-    if 'username' not in session:
-        return render_template('login.html')
+    # if 'username' not in session:
+    #     return render_template('login.html')
 
     # dbmodel = x.DBModel()
     # get_file = dbmodel.get_data_all("Judul_Skripsi", "file")
